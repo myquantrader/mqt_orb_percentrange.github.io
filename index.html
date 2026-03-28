@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MQT_ORB_PercentRange – NinjaTrader 8 Indicator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Segoe UI, Tahoma, sans-serif;
+  background:#0a0a0a;
+  color:#e0e0e0;
+  line-height:1.6;
+}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* Header */
+header{
+  background:#000;
+  border-bottom:2px solid #00ff00;
+  padding:16px 0;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.brand img{height:48px}
+.brand h1{
+  color:#00ff00;
+  font-size:1.5rem;
+  font-weight:700;
+}
+
+/* Hero */
+.hero{
+  padding:80px 0;
+  text-align:center;
+  background:linear-gradient(135deg,#000,#1a1a1a);
+  border-bottom:3px solid #00ff00;
+}
+.hero h2{
+  color:#00ff00;
+  font-size:2.6rem;
+  margin-bottom:18px;
+}
+.hero p{
+  max-width:1000px;
+  margin:0 auto 30px;
+  font-size:1.15rem;
+  color:#b0b0b0;
+}
+.cta-button{
+  display:inline-block;
+  background:#00ff00;
+  color:#000;
+  padding:14px 38px;
+  font-weight:800;
+  border-radius:5px;
+  text-decoration:none;
+  border:2px solid #00ff00;
+  transition:.25s;
+}
+.cta-button:hover{
+  background:#000;
+  color:#00ff00;
+  box-shadow:0 0 18px rgba(0,255,0,.4);
+}
+
+/* Section titles */
+.section-title{
+  text-align:center;
+  color:#00ff00;
+  font-size:2.2rem;
+  margin-bottom:50px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+/* Features */
+.features{padding:60px 0;background:#0f0f0f}
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.feature-card{
+  background:#1a1a1a;
+  border:1px solid #333;
+  border-radius:8px;
+  padding:28px;
+  transition:.25s;
+}
+.feature-card:hover{
+  border-color:#00ff00;
+  transform:translateY(-5px);
+}
+.feature-card h3{color:#00ff00;margin-bottom:12px}
+.feature-card p{color:#b0b0b0}
+
+/* Screenshots */
+.screenshots{padding:60px 0;background:#000}
+.screenshot-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+  gap:30px;
+}
+.screenshot-item{
+  background:#1a1a1a;
+  border:1px solid #333;
+  border-radius:8px;
+  padding:18px;
+}
+.screenshot-item img{
+  width:100%;
+  border-radius:6px;
+  margin-bottom:12px;
+}
+.screenshot-item h3{text-align:center;color:#00ff00}
+.screenshot-item p{text-align:center;color:#9a9a9a;font-size:.95rem}
+
+/* How it works */
+.how-it-works{padding:60px 0;background:#0f0f0f}
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.step{
+  background:#1a1a1a;
+  padding:28px;
+  border-left:4px solid #00ff00;
+  border-radius:8px;
+}
+.step-number{
+  width:40px;height:40px;
+  background:#00ff00;color:#000;
+  border-radius:50%;
+  text-align:center;
+  line-height:40px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+.step h3{color:#00ff00;margin-bottom:8px}
+.step p{color:#b0b0b0}
+
+/* FAQ */
+.faq{padding:60px 0;background:#0f0f0f}
+.faq-item{
+  background:#1a1a1a;
+  border-left:4px solid #00ff00;
+  border-radius:8px;
+  padding:24px;
+  margin-bottom:20px;
+}
+.faq-item h3{color:#00ff00;margin-bottom:10px}
+.faq-item p{color:#b0b0b0}
+
+/* Footer */
+footer{
+  background:#000;
+  border-top:2px solid #00ff00;
+  padding:30px 0;
+  text-align:center;
+}
+footer p{color:#666}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="brand">
+      <img src="https://cdn.abacus.ai/images/1262d49e-7f7b-4645-ab85-8c06cd67e487.png">
+      <h1>MQT_ORB_PercentRange</h1>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>Opening Range Expansion in Percentage Terms</h2>
+    <p>
+      MQT_ORB_PercentRange shows how much of the full trading session’s range
+      is created during a specific intraday window such as the Opening Range.
+      Real‑time percentages and optional historical averages provide immediate
+      volatility context.
+    </p>
+    <a class="cta-button" href="#" onclick="alert('Add checkout URL');return false;">Download Now</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <h2 class="section-title">Key Features</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Intraday vs Full Session</h3>
+        <p>Quantifies how much of the day’s total range forms early.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Configurable Time Windows</h3>
+        <p>Supports any session, including non‑RTH and overnight windows.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Live Percentage Output</h3>
+        <p>Instant feedback on volatility expansion as the session unfolds.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Backtest Averages</h3>
+        <p>Compare today’s ORB strength to historical norms.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Fixed Chart Display</h3>
+        <p>Clean, non‑intrusive text drawn in a fixed chart location.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Automatic Daily Reset</h3>
+        <p>Each trading day is tracked independently with archived history.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="screenshots">
+  <div class="container">
+    <h2 class="section-title">Chart Examples</h2>
+
+    <div class="screenshot-grid">
+      <div class="screenshot-item">
+        <img src="https://cdn.abacus.ai/images/2f07c3c5-3e92-41c7-94f0-3f8cefed4c90.png">
+        <h3>NQ – ORB Percentage</h3>
+        <p>Opening range contribution vs full session</p>
+      </div>
+
+      <div class="screenshot-item">
+        <img src="https://cdn.abacus.ai/images/7005c218-dace-46ce-b407-38f97c32d10c.png">
+        <h3>ES – Historical Context</h3>
+        <p>Live percentage compared to backtest average</p>
+      </div>
+
+      <div class="screenshot-item">
+        <img src="https://cdn.abacus.ai/images/02b9744d-964d-4893-8782-f49d7a108177.png">
+        <h3>GC – Volatility Expansion</h3>
+        <p>Early session strength measured against full range</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Track Two Windows</h3>
+        <p>High/low values are recorded for intraday and full‑day windows.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Calculate Percentage</h3>
+        <p>The intraday range is divided by the full session range.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Store History</h3>
+        <p>Daily values are saved for rolling backtest averages.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Display Results</h3>
+        <p>Results are shown as fixed text directly on the chart.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h2 class="section-title">FAQ</h2>
+
+    <div class="faq-item">
+      <h3>Does this repaint?</h3>
+      <p>No. All values are calculated on completed bars only.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I change the ORB times?</h3>
+      <p>Yes. Both windows are fully configurable.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What does Backtest Days do?</h3>
+      <p>It controls how many prior sessions are averaged.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is this instrument‑specific?</h3>
+      <p>No. It works on any market or timeframe.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 myQuantrader.com — All Rights Reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>
